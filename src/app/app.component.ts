@@ -29,7 +29,7 @@ public items:any=['name'];
      name:name
    };
    all.push(list);
-   alert(JSON.stringify(all));
+   //alert(JSON.stringify(all));
    localStorage.setItem("productList",JSON.stringify(all));
    this.ngOnInit();
   }
