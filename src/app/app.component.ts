@@ -10,7 +10,6 @@ export class AppComponent  {
 
  public array:any=[];
 public items:any=['name'];
-
  ngOnInit(){
  this.items= JSON.parse(localStorage.getItem("productList"));
  }
@@ -18,17 +17,20 @@ public items:any=['name'];
    let list={
      name:name
    };
-
   // alert(JSON.stringify(list));
-   
     this.array.push(list);
     this.items= JSON.parse(localStorage.getItem("productList"));
-   localStorage.setItem("productList", JSON.stringify(this.array));
-
-   //this.restform();
+   localStorage.setItem("productList", JSON.stringify(this.array));  
   this.ngOnInit();
  }
-  restform(){
-    this.name="";
+  
+  k(name,all){
+     let list={
+     name:name
+   };
+   all.push(list);
+   alert(JSON.stringify(all));
+   localStorage.setItem("productList",JSON.stringify(all));
+   this.ngOnInit();
   }
 }
