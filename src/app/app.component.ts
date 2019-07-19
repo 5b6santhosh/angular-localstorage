@@ -17,13 +17,11 @@ public items:any=['name'];
    let list={
      name:name
    };
-  // alert(JSON.stringify(list));
     this.array.push(list);
     this.items= JSON.parse(localStorage.getItem("productList"));
    localStorage.setItem("productList", JSON.stringify(this.array));  
   this.ngOnInit();
  }
-  
   k(name,all){
      let list={
      name:name

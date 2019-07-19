@@ -2,7 +2,6 @@
 <input typr="text" [(ngModel)]='name'/>
 
 <button (click)="n(name)" *ngIf="!items">store</button>
-
 <button (click)="k(name,items)" *ngIf="items">store</button>
 <ol>
 <li *ngFor="let m of items" >
