@@ -31,4 +31,12 @@ public items:any=['name'];
    localStorage.setItem("productList",JSON.stringify(all));
    this.ngOnInit();
   }
+  delete(n){
+   // alert(n);
+        this.items.splice(n);
+     alert(JSON.stringify(this.items));
+    localStorage.setItem("productList",JSON.stringify(this.items));
+    this.ngOnInit();
+    
+  }
 }
