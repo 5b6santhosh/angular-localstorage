@@ -32,8 +32,10 @@ public items:any=['name'];
    this.ngOnInit();
   }
   delete(n){
-   // alert(n);
+    alert(n);
+    
         this.items.splice(n);
+
      alert(JSON.stringify(this.items));
     localStorage.setItem("productList",JSON.stringify(this.items));
     this.ngOnInit();
