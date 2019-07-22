@@ -5,6 +5,6 @@
 <button (click)="k(name,items)" *ngIf="items">store</button>
 <ol>
 <li *ngFor="let m of items;let i=index" >
- {{m.name}} <button [disabled]="i==0"  (click)="delete(i)">Deleted</button>
+ {{m.name}} <button  (click)="delete(m.name)">Deleted</button>
 </li>
 </ol>

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
-
+  total:number=1;
  public array:any=[];
 public items:any=['name'];
  ngOnInit(){
@@ -32,12 +32,16 @@ public items:any=['name'];
    this.ngOnInit();
   }
   delete(n){
-    //alert(n);
-    
-        this.items.splice(n);
-
-    // alert(JSON.stringify(this.items));
-    localStorage.setItem("productList",JSON.stringify(this.items));
+   
+     let productList = JSON.parse(localStorage.getItem("productList"));
+   alert(n);
+  for(let i = 0; i < productList.length; i++){
+    if (productList[i].name === n) {
+      productList.splice(i,1);    
+    }
+  }
+      
+   localStorage.setItem("productList", JSON.stringify(productList));
     this.ngOnInit();
     
   }
